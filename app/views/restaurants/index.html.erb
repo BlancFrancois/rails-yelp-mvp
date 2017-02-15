@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<div class="wrapper">
+<h1>Restaurants</h1>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone number</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+ -->
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(http://lorempixel.com/200/300?random=<%= rand(100) %>);">
+          <%= link_to '', restaurant, class: 'card-link' %>
+          <div class="card-category"><%= restaurant.category %></div>
+          <h2 class="text-center"><%= restaurant.name %></h2>
+          <div class="card-footer">
+            <div class="card-description">
+              <p><%= restaurant.address %></p>
+              <p><%= restaurant.phone_number %></p>
+            </div>
+            <ul class="card-actions list-inline">
+              <li><%= link_to 'Edit', edit_restaurant_path(restaurant) %></li>
+              <li><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<br>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>

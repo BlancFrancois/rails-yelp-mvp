@@ -1,0 +1,46 @@
+.card {
+  height: 250px;
+  background-size: cover;
+  color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card-category {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  font-size: 25px;
+}
+
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  opacity: 0;
+  z-index: 2;
+}
+
+.card-link:hover {
+  opacity: 0.2;
+}
+
+.card-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
